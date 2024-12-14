@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example Cafe Menu</title>
+    <style>
+        /* Reset */
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        /* Tổng quan trang */
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fff;
+            color: #000;
+        }
+        /* Header */
+        
+        header {
+            background-color: #F8B8B8;
+            /* Màu hồng nhạt */
+            text-align: center;
+            padding: 20px 0;
+        }
+        
+        header h1 {
+            font-style: italic;
+            font-size: 2.5rem;
+            color: #C44B4B;
+            /* Màu chữ đậm */
+        }
+        /* Menu chính */
+        
+        nav {
+            background-color: #F8B8B8;
+            text-align: center;
+            padding: 10px 0;
+        }
+        
+        nav a {
+            color: #000;
+            text-decoration: none;
+            margin: 0 20px;
+            font-weight: bold;
+        }
+        
+        nav input[type="search"] {
+            padding: 5px;
+        }
+        /* Sidebar bên trái */
+        
+        .sidebar {
+            float: left;
+            width: 20%;
+            padding: 20px;
+        }
+        
+        .sidebar button {
+            display: block;
+            width: 100%;
+            margin-bottom: 10px;
+            background-color: #F8B8B8;
+            color: #000;
+            border: none;
+            padding: 10px;
+            font-size: 1rem;
+            cursor: pointer;
+            text-align: left;
+        }
+        /* Nội dung chính */
+        
+        .main-content {
+            float: left;
+            width: 60%;
+            padding: 20px;
+        }
+        
+        .main-content h2 {
+            color: #C44B4B;
+            background-color: #F8B8B8;
+            display: inline-block;
+            padding: 5px 20px;
+            margin-bottom: 10px;
+        }
+        
+        .main-content ul {
+            margin: 10px 0;
+            list-style: none;
+        }
+        
+        .main-content ul li {
+            margin-bottom: 5px;
+        }
+        
+        .main-content a {
+            color: red;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        /* Events bên phải */
+        
+        .events {
+            float: left;
+            width: 20%;
+            background-color: #000;
+            color: #fff;
+            padding: 20px;
+        }
+        
+        .events h3 {
+            margin-bottom: 10px;
+        }
+        
+        .events img {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        
+        .events a {
+            color: #F8B8B8;
+            text-decoration: none;
+        }
+        /* Form Information */
+        
+        .form-section {
+            clear: both;
+            margin: 20px 0;
+        }
+        
+        .form-section h2 {
+            background-color: #F8B8B8;
+            display: inline-block;
+            padding: 5px 20px;
+            color: #C44B4B;
+            margin-bottom: 10px;
+        }
+        
+        form {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            padding: 20px 0;
+        }
+        
+        form input,
+        form select,
+        form textarea {
+            padding: 10px;
+            border: 1px solid #ccc;
+            width: 100%;
+        }
+        
+        form button {
+            padding: 10px 20px;
+            background-color: #F8B8B8;
+            border: none;
+            cursor: pointer;
+            color: #000;
+        }
+        /* Footer */
+        
+        footer {
+            background-color: #F8B8B8;
+            text-align: center;
+            padding: 10px 0;
+            clear: both;
+            color: #C44B4B;
+            font-style: italic;
+            font-size: 1.1rem;
+        }
+        
+        #groupphoto {
+            height: 150px;
+            width: 150px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <h1>EXAMPLE CAFE MENU</h1>
+    </header>
+
+    <!-- Navigation Menu -->
+    <nav>
+        <a href="#">STARTER</a>
+        <a href="#">MAIN COURSES</a>
+        <a href="#">DESSERTS</a>
+        <input type="search" placeholder="Search...">
+        <button>Go</button>
+    </nav>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <button>Cafe Latte</button>
+        <button>Capuchino</button>
+        <button>Ocean Blue</button>
+        <button>Ice-cream Cafe</button>
+        <button>Order Online</button>
+        <img id="groupphoto" src="../img/company.png" alt="Group Photo" sizes="50%" />
+    </div>
+
+    <!-- Nội dung chính -->
+    <div class="main-content">
+        <h2>S t a r t e r</h2>
+        <ul>
+            <li>Chesnut and Mushroom Goujons (<a href="#">x</a>)</li>
+            <li>Goat Cheese (<a href="#">y</a>)</li>
+            <li>HONEY SOY CHICKEN KEBABS (<a href="#">y</a>)</li>
+            <li>Seafood Salad (<a href="#">y</a>)</li>
+        </ul>
+
+        <h2>D e s s e r t s</h2>
+        <ul>
+            <li>Lemon Sorbet (<a href="#">x</a>)</li>
+            <li>Chocolate Mud Pie (<a href="#">y</a>)</li>
+            <li>Pecan Pie (<a href="#">y</a>)</li>
+            <li>Selection of fine Cheeses from Around the World (<a href="#">y</a>)</li>
+        </ul>
+    </div>
+
+    <!-- Events -->
+    <div class="events">
+        <h3>Events</h3>
+        <div>
+            <h4>Regular Meetings</h4>
+            <img src="../img/meeting.png" alt="Meeting">
+            <p>Host your regular team meetings or activities... <a href="#">Read more...</a></p>
+        </div>
+        <div>
+            <h4>Product Launches</h4>
+            <img src="../img/launch.png" alt="Launch">
+            <p>Launch your product with ease... <a href="#">Read more...</a></p>
+        </div>
+    </div>
+
+    <!-- Form -->
+    <div class="form-section">
+        <h2>I N F O R M A T I O N</h2>
+        <form>
+            <input type="text" placeholder="First Name">
+            <input type="text" placeholder="Last Name">
+            <input type="email" placeholder="Email">
+            <input type="tel" placeholder="Telephone">
+            <select>
+                <option>USA</option>
+                <option>Vietnam</option>
+                <option>Other</option>
+            </select>
+            <textarea placeholder="Comment"></textarea>
+            <button type="submit">Submit</button>
+            <button type="reset">Cancel</button>
+        </form>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>ABC Company &copy; - 12345678 - abccoffee@gmail.com</p>
+    </footer>
+</body>
+
+</html>
